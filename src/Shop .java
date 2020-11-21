@@ -204,7 +204,7 @@ class Shop {
 
 
     }
-    public User getBill(User user) {
+    public User getRport(User user) {
         try {
             File file = new File("g://User.txt");
 
