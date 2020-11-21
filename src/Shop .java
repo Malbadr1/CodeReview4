@@ -92,7 +92,7 @@ class Shop {
         System.out.println("3. Display all products where stock <5.");
         System.out.println("4. Display all products out of stock.");
         System.out.println("5. Exit.");
-        System.out.println("Enter your choice:");
+
 
 
         try {
@@ -100,6 +100,8 @@ class Shop {
 
 
                 Scanner sca = new Scanner(System.in);
+                System.out.println("Enter your choice:");
+
                 choice = sca.nextInt();
 
                 switch (choice) {
@@ -160,8 +162,11 @@ class Shop {
                         break;
                     case 4:
                         for (int i = 0; i < products.size(); i++) {
-                            if (products.get(i).getStock() == 0)
+                            if (products.get(i).getStock() == 0) {
                                 System.out.println(products.get(i));
+                            } else {
+                                System.out.println(" The  products  not out of stock you can check this list: " + "\n" + products.get(i));
+                            }
                         }
                         break;
 

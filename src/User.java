@@ -22,6 +22,7 @@ public class User {
 
     public void buyProductFromShop(Product product,Shop shop) {
 
+
         for (int i = 0; i < shop.getProducts().size(); i++) {
 
             if (shop.getProducts().get(i).getProductName().equals(product.getProductName()) && shop.getProducts().get(i).getProductPrice() == product.getProductPrice()) {

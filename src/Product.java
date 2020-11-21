@@ -14,7 +14,7 @@ public class Product {
         this.productPrice = productPrice;
         this.productCategory = productCategory;
         this.productId = IdIncrement++;
-        this.stock = 100;
+        this.stock = 5;
     }
 
     public int getProductId() {
@@ -58,6 +58,7 @@ public class Product {
     }
 
     public int getStock() {
+
         return stock;
     }
 
