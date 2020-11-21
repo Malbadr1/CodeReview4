@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileWriter;
 import java.util.*;
 
 class Shop {
@@ -201,5 +203,23 @@ class Shop {
         return true;
 
 
+    }
+    public User getBill(User user) {
+        try {
+            File file = new File("g://User.txt");
+
+            if (file.createNewFile()) {
+                System.out.println("done");
+            } else {
+                System.out.println("it's already created");
+            }
+            FileWriter fileWriter = new FileWriter(file);
+
+            fileWriter.write(String.valueOf(user));
+            fileWriter.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return user;
     }
 }

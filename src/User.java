@@ -20,7 +20,7 @@ public class User {
         purchase_History=new ArrayList<>();
     }
 
-    public void buyProductFromShop(Product product,Shop shop) {
+    public void  purchaseProductFromShop(Product product,Shop shop) {
 
 
         for (int i = 0; i < shop.getProducts().size(); i++) {
@@ -84,5 +84,17 @@ public class User {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return "User: " +
+                "Id: " + Id +
+                ", firstName: " + firstName + '\'' +
+                ", lastName: " + lastName + '\n' +
+                ", E_Mail: " + E_Mail + '\'' +
+                ", zip: " + zip + '\'' +
+                ", phone: " + phone + '\n' +
+                ", purchase_History=" + purchase_History ;
     }
 }
