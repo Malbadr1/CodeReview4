@@ -25,17 +25,12 @@ class Shop {
         products.add(product);
 
 
-                if (products.size() >= 15) {
-                    System.out.println("Product has more then 15 items in stock");
+        if (products.size() >= 15) {
+            System.out.println("Product has more then 15 items in stock");
 
 
-                }
-            }
-
-
-
-
-
+        }
+    }
 
 
     public String getName() {
@@ -76,7 +71,6 @@ class Shop {
         int n = 0;
 
 
-
         System.out.println("+----------------------+");
         System.out.println("|       Welcome        |");
         System.out.println("|         to           |");
@@ -84,8 +78,8 @@ class Shop {
         System.out.println("+----------------------+");
 
 
-            do {
-                try {
+        do {
+            try {
 
                 System.out.println("\n" + "Make a selection.");
                 System.out.println("1. Display all products.");
@@ -97,7 +91,7 @@ class Shop {
                 Scanner sca = new Scanner(System.in);
                 System.out.println("Enter your choice:");
 
-               int choice = sca.nextInt();
+                int choice = sca.nextInt();
 
                 switch (choice) {
 
@@ -187,11 +181,10 @@ class Shop {
                 }
 
 
+            } catch (Exception e) {
 
-        } catch (Exception e) {
-
-            System.out.println("Error, please Enter Number ");
-        }
+                System.out.println("Error, please Enter Number ");
+            }
         } while (n == 0);
         return true;
 
