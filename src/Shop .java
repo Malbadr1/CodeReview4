@@ -22,27 +22,10 @@ class Shop {
 
     public void addProductToShop(Product product) {
 
-        boolean found = false;
+        products.add(product);
 
-        for (int i = 0; i < products.size(); i++) {
-
-            if (products.get(i).getProductName().equals(product.getProductName()) && products.get(i).getProductPrice() == product.getProductPrice()) {
-
-                if (products.get(i).getStock() >= 15) {
-                    System.out.println("Product has more then 15 items in stock");
-                    found = true;
-                } else {
-                    int newStock = products.get(i).getStock() + 1;
-                    products.get(i).setStock(newStock);
-                    found = true;
-                }
-            }
-        }
-
-        if (found == false) {
-            products.add(product);
-        }
     }
+
 
     public String getName() {
         return name;
@@ -82,7 +65,6 @@ class Shop {
         int n = 0;
 
 
-
         System.out.println("+----------------------+");
         System.out.println("|       Welcome        |");
         System.out.println("|         to           |");
@@ -102,7 +84,7 @@ class Shop {
                 Scanner sca = new Scanner(System.in);
                 System.out.println("Enter your choice:");
 
-               int choice = sca.nextInt();
+                int choice = sca.nextInt();
 
                 switch (choice) {
 
