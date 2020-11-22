@@ -25,6 +25,7 @@ public class Main {
         user3. purchaseProductFromShop(p4, MariaSport);
 
         MariaSport.getRport(user1);
+        MariaSport.getRport(user2);
 
         MariaSport.menuShop();
 

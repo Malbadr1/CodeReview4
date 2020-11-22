@@ -80,7 +80,7 @@ class Shop {
 
     public boolean menuShop() {
         int n = 0;
-        int choice;
+
 
 
         System.out.println("+----------------------+");
@@ -88,23 +88,21 @@ class Shop {
         System.out.println("|         to           |");
         System.out.println("|        Shop          |");
         System.out.println("+----------------------+");
-        System.out.println("Make a selection.");
-        System.out.println("1. Display all products.");
-        System.out.println("2. Display all products of category x.");
-        System.out.println("3. Display all products where stock <5.");
-        System.out.println("4. Display all products out of stock.");
-        System.out.println("5. Exit.");
-
-
 
         try {
             do {
 
+                System.out.println("\n" + "Make a selection.");
+                System.out.println("1. Display all products.");
+                System.out.println("2. Display all products of category x.");
+                System.out.println("3. Display all products where stock <5.");
+                System.out.println("4. Display all products out of stock.");
+                System.out.println("5. Exit.");
 
                 Scanner sca = new Scanner(System.in);
                 System.out.println("Enter your choice:");
 
-                choice = sca.nextInt();
+               int choice = sca.nextInt();
 
                 switch (choice) {
 
@@ -115,8 +113,8 @@ class Shop {
                         break;
 
                     case 2:
-                        int category ;
-                        ProductCategory productCategory=null;
+                        int category;
+                        ProductCategory productCategory = null;
                         System.out.println("Choose category");
                         System.out.println("1. T_Shirts");
                         System.out.println("2. Trousers");
@@ -127,22 +125,22 @@ class Shop {
                         Scanner sc = new Scanner(System.in);
                         category = sc.nextInt();
 
-                        switch (category){
+                        switch (category) {
                             case 1:
                                 productCategory = ProductCategory.T_Shirts;
                                 break;
                             case 2:
 
-                             productCategory = ProductCategory.Trousers;
-                             break;
-                             case 3:
-                                 productCategory = ProductCategory.Shirts;
-                                 break;
-                                case 4:
-                              productCategory =ProductCategory.Jackets;
-                              break;
-                                case 5:
-                               productCategory =ProductCategory.Accessories;
+                                productCategory = ProductCategory.Trousers;
+                                break;
+                            case 3:
+                                productCategory = ProductCategory.Shirts;
+                                break;
+                            case 4:
+                                productCategory = ProductCategory.Jackets;
+                                break;
+                            case 5:
+                                productCategory = ProductCategory.Accessories;
                                 break;
                             default:
                                 System.out.println("please Enter Number from 1 to 5");
@@ -174,14 +172,13 @@ class Shop {
 
                     case 5:
                         System.out.println("Are you sure you want exit?, please Enter (1 to Yes) ");
-                        Scanner scanner=new Scanner(System.in);
-                       int prov=scanner.nextInt();
-                        if (prov==1) {
+                        Scanner scanner = new Scanner(System.in);
+                        int prov = scanner.nextInt();
+                        if (prov == 1) {
                             choice = 5;
                             n = choice;
                             System.out.println("thank you and We wish to visit us again");
-                        }
-                        else  {
+                        } else {
                             choice = 0;
                             n = choice;
                             System.out.println("Welcome back please Choice what you wish from Menu");
@@ -204,6 +201,7 @@ class Shop {
 
 
     }
+
     public User getRport(User user) {
         try {
             File file = new File("g://User.txt");

@@ -70,9 +70,9 @@ public class Product {
     public String toString() {
         return "productId is : " + productId +
                 "| productName is : " + productName + '\n' +
-                "| productDescription is : " + productDescription + '\'' +
-                "| productPrice is : " + productPrice +"\n"+
+                "| productDescription is : " + productDescription + '\n' +
+                "| productPrice is : " + productPrice +"\'"+
                 "| productCategory is : " + productCategory +"\'"+
-                "| stock :" + stock ;
+                "|  in stock :" + stock ;
     }
 }
