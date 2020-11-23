@@ -71,8 +71,8 @@ public class Product {
         return "productId is : " + productId +
                 "| productName is : " + productName + '\n' +
                 "| productDescription is : " + productDescription + '\n' +
-                "| productPrice is : " + productPrice +"\'"+
-                "| productCategory is : " + productCategory +"\'"+
-                "|  in stock :" + stock ;
+                "| productPrice is : " + productPrice + "\'" +
+                "| productCategory is : " + productCategory + "\'" +
+                "|  in stock :" + stock;
     }
 }

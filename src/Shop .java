@@ -160,7 +160,7 @@ class Shop {
                         break;
 
                     case 5:
-                        System.out.println("Are you sure you want exit?, please Enter (1 to Yes) ");
+                        System.out.println("Are you sure you want exit?, please Enter (1 to Yes)and (any num lock for No ");
                         Scanner scanner = new Scanner(System.in);
                         int prov = scanner.nextInt();
                         if (prov == 1) {

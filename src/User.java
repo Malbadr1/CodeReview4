@@ -8,7 +8,7 @@ public class User {
     private String E_Mail;
     private String zip;
     private String phone;
-    private static int idUserIncrement=1;
+    private static int idUserIncrement = 1;
     private ArrayList<Product> purchase_History;
 
     public User(String firstName, String lastName, String E_Mail, String zip, String phone) {
@@ -16,11 +16,11 @@ public class User {
         this.E_Mail = E_Mail;
         this.zip = zip;
         this.phone = phone;
-        this.Id=idUserIncrement++;
-        purchase_History=new ArrayList<>();
+        this.Id = idUserIncrement++;
+        purchase_History = new ArrayList<>();
     }
 
-    public void  purchaseProductFromShop(Product product,Shop shop) {
+    public void purchaseProductFromShop(Product product, Shop shop) {
 
 
         for (int i = 0; i < shop.getProducts().size(); i++) {
@@ -32,8 +32,7 @@ public class User {
                 if (stock_old == 0) {
 
                     System.out.println("Product out of stock");
-                }
-                else {
+                } else {
                     stock_old = stock_old - 1;
                     shop.getProducts().get(i).setStock(stock_old);
                     shop.addUserToBuyHistory(this);
@@ -66,7 +65,7 @@ public class User {
     }
 
     public void setE_Mail(String E_Mail) {
-        this.E_Mail= E_Mail;
+        this.E_Mail = E_Mail;
 
     }
 
@@ -95,6 +94,6 @@ public class User {
                 ", E_Mail: " + E_Mail + '\'' +
                 ", zip: " + zip + '\'' +
                 ", phone: " + phone + '\n' +
-                ", purchase_History=" + purchase_History ;
+                ", purchase_History=" + purchase_History;
     }
 }

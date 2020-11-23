@@ -19,10 +19,10 @@ public class Main {
         User user2 = new User("Doe", "Jone", "Doe@gmx.net", "1050", "06877425644");
         User user3 = new User("Maxi", "Sami", "Maxi@gmx.net", "1070", "063464425644");
 
-        user1. purchaseProductFromShop(p1,MariaSport);
-        user1. purchaseProductFromShop(p2, MariaSport);
-        user2. purchaseProductFromShop(p3,MariaSport);
-        user3. purchaseProductFromShop(p4, MariaSport);
+        user1.purchaseProductFromShop(p1, MariaSport);
+        user1.purchaseProductFromShop(p2, MariaSport);
+        user2.purchaseProductFromShop(p3, MariaSport);
+        user3.purchaseProductFromShop(p4, MariaSport);
 
         MariaSport.getRport(user1);
         MariaSport.getRport(user2);
