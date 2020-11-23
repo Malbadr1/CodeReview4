@@ -22,12 +22,14 @@ class Shop {
 
     public void addProductToShop(Product product) {
 
-        products.add(product);
 
 
         if (products.size() >= 15) {
             System.out.println("Product has more then 15 items in stock");
 
+
+        }else {
+            products.add(product);
 
         }
     }
